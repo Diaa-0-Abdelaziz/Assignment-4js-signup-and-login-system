@@ -33,6 +33,8 @@ signupForm.addEventListener("submit", (e)=>{
                    location.replace("../index.html");
                },3000)
             }
+           }else if(signupUsername.value =="" || signupEmail.value == "" || signupPassword.value == ""){
+            emptyMessage();
            }
            
 })
@@ -68,6 +70,16 @@ function errorMessage()
         title: "Email already existed",
         text: "please enter another email",
         icon: "info",
+        button: "OK",
+      });
+}
+//****empty message*******/
+function emptyMessage()
+{
+    swal({
+        title: "Please fill out all input fields",
+        // text: "please enter another email",
+        icon: "error",
         button: "OK",
       });
 }
