@@ -15,14 +15,11 @@ loginForm.addEventListener("submit", (e)=>{
         let validEmail = loginEmail.value == userAccountsSave[i].userEmail;
         let validPassword = loginPassword.value == userAccountsSave[i].userPassword;
         if(validEmail && validPassword){
-            console.log(true)
             localStorage.setItem("user", JSON.stringify(userAccountsSave[i].userName))
             successMessage();
             setTimeout(()=>{
-                location.replace("../bages/home.html")
+                window.open("../bages/home.html","_self")
             },3000)
-        } else if(!validEmail || !validPassword){
-            errorMessage();
         }
     }
    } else if(localStorage.getItem("usersAccounts") == null){
