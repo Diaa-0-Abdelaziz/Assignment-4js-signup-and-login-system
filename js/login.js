@@ -19,7 +19,7 @@ loginForm.addEventListener("submit", (e)=>{
             localStorage.setItem("user", JSON.stringify(userAccountsSave[i].userName))
             successMessage();
             setTimeout(()=>{
-                window.open("../bages/home.html")
+                location.replace("../bages/home.html")
             },3000)
         } else if(!validEmail || !validPassword){
             errorMessage();
