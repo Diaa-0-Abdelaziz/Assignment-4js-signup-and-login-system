@@ -18,7 +18,7 @@ loginForm.addEventListener("submit", (e)=>{
             localStorage.setItem("user", JSON.stringify(userAccountsSave[i].userName))
             successMessage();
             setTimeout(()=>{
-                window.open("../bages/home.html","_self")
+                window.open("bages/home.html","_self")
             },3000)
         }
     }
